@@ -347,12 +347,6 @@ descending order (so the last element of coefficients is the constant term)."
   [h K n X x]
   (/ (reduce #(+ %1 (K (/ (- x %2) h))) 0 X) (* n h)))
 
-(defn oversmoothed-bandwidth
-  "Estimate an oversmoothed bandwidth.
-Terrell, Scott, 1995.
-"
-  )
-
 (defn mode-count
   "Count the number of modes, using bandwidth between h-over-smoothed and
   h-crit, kernel K for n samples X, between x-min and x-max.
